@@ -10,18 +10,15 @@
 Pod::Spec.new do |s|
   s.name             = "AZImagePicker"
   s.version          = "0.1.0"
-  s.summary          = "A short description of AZImagePicker."
+  s.summary          = "Image cropping library for iOS"
   s.description      = <<-DESC
-                       An optional longer description of AZImagePicker
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
+                       Image cropping library for iOS.
                        DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/AZImagePicker"
+  s.homepage         = "https://github.com/windless/AZImagePicker"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Abner Zhong" => "windlessg@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/AZImagePicker.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/windless/AZImagePicker.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '7.0'
