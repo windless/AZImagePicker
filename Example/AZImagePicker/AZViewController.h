@@ -8,6 +8,6 @@
 
 @import UIKit;
 
-@interface AZViewController : UIViewController
+@interface AZViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @end
