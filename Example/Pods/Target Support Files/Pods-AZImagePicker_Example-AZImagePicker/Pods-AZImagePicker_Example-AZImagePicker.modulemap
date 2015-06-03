@@ -1,0 +1,6 @@
+framework module AZImagePicker {
+  umbrella header "Pods-AZImagePicker_Example-AZImagePicker-umbrella.h"
+
+  export *
+  module * { export * }
+}

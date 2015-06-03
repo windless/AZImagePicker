@@ -1,0 +1,14 @@
+PODS:
+  - AZImagePicker (0.1.0)
+
+DEPENDENCIES:
+  - AZImagePicker (from `../`)
+
+EXTERNAL SOURCES:
+  AZImagePicker:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AZImagePicker: f986e6ed011661dce34f026ded2e5b81f5a94aa0
+
+COCOAPODS: 0.37.2

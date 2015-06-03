@@ -1,0 +1,6 @@
+framework module Pods_AZImagePicker_Tests {
+  umbrella header "Pods-AZImagePicker_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

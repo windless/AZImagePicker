@@ -7,10 +7,10 @@
             buildForRunning = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6003F589195388D20070C39A"
-               BuildableName = "AZImagePicker_Example.app"
-               BlueprintName = "AZImagePicker_Example"
-               ReferencedContainer = "container:AZImagePicker.xcodeproj">
+               BlueprintIdentifier = "1CD80F9204C107247A07D626"
+               BuildableName = "AZImagePicker.framework"
+               BlueprintName = "Pods-AZImagePicker_Example-AZImagePicker"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -24,7 +24,7 @@
             BlueprintIdentifier = "6003F589195388D20070C39A"
             BuildableName = "AZImagePicker_Example.app"
             BlueprintName = "AZImagePicker_Example"
-            ReferencedContainer = "container:AZImagePicker.xcodeproj">
+            ReferencedContainer = "container:../AZImagePicker.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
