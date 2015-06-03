@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		075FB9151B1EB26C00C98EFF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 075FB9131B1EB26C00C98EFF /* LaunchScreen.xib */; };
 		0AA8189E88A9F2ACAF7BC373 /* Pods_AZImagePicker_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D26F78C85D9CD70FEC0ECA7 /* Pods_AZImagePicker_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		31DE8712156F37814A9E6D60 /* Pods_AZImagePicker_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD7C02427A85D9B6BB79930D /* Pods_AZImagePicker_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		008002F04F881D4439E3B5E2 /* Pods-AZImagePicker_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AZImagePicker_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AZImagePicker_Tests/Pods-AZImagePicker_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		075FB9141B1EB26C00C98EFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		0E0113EB919AF02495632C83 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		22511977A1C11223079965BB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		3B64097AA32922ED1FD95919 /* Pods-AZImagePicker_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AZImagePicker_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AZImagePicker_Tests/Pods-AZImagePicker_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				6003F59C195388D20070C39A /* AZAppDelegate.h */,
 				6003F59D195388D20070C39A /* AZAppDelegate.m */,
 				6003F59F195388D20070C39A /* Main_iPhone.storyboard */,
+				075FB9131B1EB26C00C98EFF /* LaunchScreen.xib */,
 				6003F5A2195388D20070C39A /* Main_iPad.storyboard */,
 				6003F5A5195388D20070C39A /* AZViewController.h */,
 				6003F5A6195388D20070C39A /* AZViewController.m */,
@@ -279,6 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				075FB9151B1EB26C00C98EFF /* LaunchScreen.xib in Resources */,
 				6003F5A4195388D20070C39A /* Main_iPad.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F5A1195388D20070C39A /* Main_iPhone.storyboard in Resources */,
@@ -419,6 +423,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		075FB9131B1EB26C00C98EFF /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				075FB9141B1EB26C00C98EFF /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
 		6003F596195388D20070C39A /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
