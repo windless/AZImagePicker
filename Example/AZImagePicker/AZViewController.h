@@ -8,6 +8,8 @@
 
 @import UIKit;
 
-@interface AZViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+#import "AZImagePicker/AZImagePickerController.h"
+
+@interface AZViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, AZImagePickerControllerDelegate>
 
 @end

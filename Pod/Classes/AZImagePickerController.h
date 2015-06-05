@@ -13,13 +13,14 @@
 
 @end
 
-@interface AZImagePickerController : UIViewController
+@interface AZImagePickerController : UIViewController <UIScrollViewDelegate>
 
-@property(nonatomic, strong) UIImage *sourceImage;
-@property(nonatomic, strong) UIButton *confirmButton;
-@property(nonatomic, strong) UIButton *cancelButton;
-@property(nonatomic, assign) CGFloat radius;
+- (instancetype)initWithSourceImage:(UIImage *)sourceImage;
+
+@property(nonatomic, strong) NSString *confirmButtonTitle;
+@property(nonatomic, strong) NSString *cancelButtonTitle;
 
 @property(nonatomic, weak) id <AZImagePickerControllerDelegate> delegate;
+
 
 @end

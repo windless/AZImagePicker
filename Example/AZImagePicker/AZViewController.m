@@ -11,6 +11,8 @@
 
 @interface AZViewController ()
 
+@property(nonatomic, strong) UIImageView *imageView;
+
 @end
 
 @implementation AZViewController
@@ -25,6 +27,11 @@
   button.center = CGPointMake(100, 100);
   [button addTarget:self action:@selector(takePhoto) forControlEvents:UIControlEventTouchUpInside];
   [self.view addSubview:button];
+
+  self.imageView = [[UIImageView alloc] init];
+  self.imageView.frame = CGRectMake(100, 200, 200, 200);
+  self.imageView.contentMode = UIViewContentModeScaleAspectFit;
+  [self.view addSubview:self.imageView];
 }
 
 - (void)takePhoto {
@@ -35,14 +42,18 @@
   [self presentViewController:pickerController animated:YES completion:nil];
 }
 
+- (void)azImagePickerController:(AZImagePickerController *)picker didFinishPickImage:(UIImage *)image {
+  self.imageView.image = image;
+}
+
 - (void)imagePickerController:(UIImagePickerController *)picker
         didFinishPickingImage:(UIImage *)image
                   editingInfo:(NSDictionary *)editingInfo {
-  __block UIImage *blockImage = image;
   [picker dismissViewControllerAnimated:YES completion:^{
-      AZImagePickerController *controller = [[AZImagePickerController alloc] init];
-      controller.sourceImage = blockImage;
-      [self presentViewController:controller animated:YES completion:nil];
+    AZImagePickerController *controller = [[AZImagePickerController alloc] initWithSourceImage:image];
+    controller.cancelButtonTitle = @"哈哈哈哈";
+    controller.delegate = self;
+    [self presentViewController:controller animated:YES completion:nil];
   }];
 }
 
