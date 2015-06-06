@@ -28,10 +28,25 @@
   [button addTarget:self action:@selector(takePhoto) forControlEvents:UIControlEventTouchUpInside];
   [self.view addSubview:button];
 
+  UIButton *photoButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+  [photoButton setTitle:@"Photos" forState:UIControlStateNormal];
+  [photoButton sizeToFit];
+  photoButton.center = CGPointMake(100, 150);
+  [photoButton addTarget:self action:@selector(getPhotos) forControlEvents:UIControlEventTouchUpInside];
+  [self.view addSubview:photoButton];
+
   self.imageView = [[UIImageView alloc] init];
   self.imageView.frame = CGRectMake(100, 200, 200, 200);
   self.imageView.contentMode = UIViewContentModeScaleAspectFit;
   [self.view addSubview:self.imageView];
+}
+
+- (void)getPhotos {
+  UIImagePickerController *pickerController = [[UIImagePickerController alloc] init];
+  pickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+  pickerController.delegate = self;
+
+  [self presentViewController:pickerController animated:YES completion:nil];
 }
 
 - (void)takePhoto {
@@ -51,7 +66,6 @@
                   editingInfo:(NSDictionary *)editingInfo {
   [picker dismissViewControllerAnimated:YES completion:^{
     AZImagePickerController *controller = [[AZImagePickerController alloc] initWithSourceImage:image];
-    controller.cancelButtonTitle = @"哈哈哈哈";
     controller.delegate = self;
     [self presentViewController:controller animated:YES completion:nil];
   }];

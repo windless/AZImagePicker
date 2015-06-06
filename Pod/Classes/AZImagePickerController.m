@@ -106,10 +106,22 @@
   self.imageView.image = self.sourceImage;
   [self.imageView sizeToFit];
   self.scrollView.contentSize = self.imageView.frame.size;
-  CGFloat scale = self.scrollView.frame.size.width / self.imageView.frame.size.width;
+
+  CGFloat scale;
+  if (CGRectGetWidth(self.imageView.bounds) > CGRectGetHeight(self.imageView.bounds)) {
+    scale = self.scrollView.frame.size.height / self.imageView.frame.size.height;
+  } else {
+    scale = self.scrollView.frame.size.width / self.imageView.frame.size.width;
+  }
+
   self.scrollView.minimumZoomScale = scale;
-  self.scrollView.maximumZoomScale = 1;
+  if (scale > 1) {
+    self.scrollView.maximumZoomScale = scale;
+  } else {
+    self.scrollView.maximumZoomScale = 1;
+  }
   [self.scrollView setZoomScale:scale];
+
 }
 
 - (UIView *)newMaskViewWithRadius:(CGFloat)radius andFrame:(CGRect)frame {
