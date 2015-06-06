@@ -29,18 +29,6 @@
   return self;
 }
 
-- (void)setConfirmButtonTitle:(NSString *)title forState:(UIControlState)state {
-  [self.confirmButton setTitle:title forState:state];
-  [self.confirmButton sizeToFit];
-  [self updateConfirmButtonPosition];
-}
-
-- (void)setCancelButtonTitle:(NSString *)title forState:(UIControlState)state {
-  [self.cancelButton setTitle:title forState:state];
-  [self.cancelButton sizeToFit];
-  [self updateCancelButtonPosition];
-}
-
 - (void)loadView {
   self.view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
   self.view.backgroundColor = [UIColor blackColor];
@@ -48,6 +36,10 @@
   self.scrollView = [[UIScrollView alloc]
       initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetWidth(self.view.bounds))];
   self.scrollView.center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds));
+  self.scrollView.showsVerticalScrollIndicator = NO;
+  self.scrollView.showsHorizontalScrollIndicator = NO;
+  self.scrollView.alwaysBounceVertical = YES;
+  self.scrollView.alwaysBounceHorizontal = YES;
   self.scrollView.clipsToBounds = NO;
   self.scrollView.delegate = self;
   [self.view addSubview:self.scrollView];
