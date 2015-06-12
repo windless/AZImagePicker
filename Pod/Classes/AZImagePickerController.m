@@ -103,6 +103,8 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  [self setNeedsStatusBarAppearanceUpdate];
+
   self.imageView.image = self.sourceImage;
   [self.imageView sizeToFit];
   self.scrollView.contentSize = self.imageView.frame.size;
@@ -121,8 +123,12 @@
     self.scrollView.maximumZoomScale = 1;
   }
   [self.scrollView setZoomScale:scale];
-
 }
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+  return UIStatusBarStyleLightContent;
+}
+
 
 - (UIView *)newMaskViewWithRadius:(CGFloat)radius andFrame:(CGRect)frame {
   UIView *view = [[UIView alloc] initWithFrame:frame];
